@@ -47,6 +47,8 @@ public class OutboxWorker : BackgroundService
 
                     await js.PublishAsync("application.submitted", message, null, null, null, cancellationToken);
 
+                    _logger.LogInformation("published outbox event {Id} for application id {application_id}", ev.Id, ev.Payload);
+
                     ev.Status = ApplicationOutboxStatus.Submitted;
                     ev.ProcessedAt = DateTime.UtcNow;
                 }
