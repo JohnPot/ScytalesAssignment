@@ -3,8 +3,10 @@
 /EntryPoint/obj
 /Domain/obj
 /Tests/bin
+/Tests/obj
 /ApplicationWorker/obj
 /.vs
 /EntryPoint/bin
 /Infrastructure/bin
 /Domain/bin
+/ApplicationWorker/bin
