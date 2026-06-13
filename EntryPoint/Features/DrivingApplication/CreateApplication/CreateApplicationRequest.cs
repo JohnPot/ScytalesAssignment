@@ -1,4 +1,4 @@
-﻿namespace EntryPoint.Features.DrivingApplication.Models.Requests;
+﻿namespace EntryPoint.Features.DrivingApplication.CreateApplication;
 
 public record CreateApplicationRequest
 {

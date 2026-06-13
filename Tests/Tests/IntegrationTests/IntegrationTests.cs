@@ -1,11 +1,11 @@
-﻿using EntryPoint.Features.DrivingApplication.Models.Responses;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Domain.Enums;
 using IntegrationTests.TestBase;
 using System.Net;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using EntryPoint.Features.DrivingApplication.CreateApplication;
 
 namespace Tests.Tests.IntegrationTests;
 

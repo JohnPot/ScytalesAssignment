@@ -1,11 +1,10 @@
-﻿using EntryPoint.Features.DrivingApplication.Models.Requests;
-using FluentValidation;
+﻿using FluentValidation;
 
-namespace EntryPoint.Features.DrivingApplication.Validations;
+namespace EntryPoint.Features.DrivingApplication.CreateApplication.Validations;
 
-public class DrivingLicenceApplicationValidator : AbstractValidator<CreateApplicationRequest>
+public class CreateApplicationValidator : AbstractValidator<CreateApplicationRequest>
 {
-    public DrivingLicenceApplicationValidator()
+    public CreateApplicationValidator()
     {
         RuleFor(x => x.FirstName)
             .NotEmpty()

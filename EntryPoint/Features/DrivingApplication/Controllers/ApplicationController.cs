@@ -1,9 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using EntryPoint.Features.DrivingApplication.Interfaces;
-using EntryPoint.Features.DrivingApplication.Models.Requests;
 using Domain.Enums;
 using EntryPoint.CommonMethods;
-using EntryPoint.Features.DrivingApplication.Models.Responses;
+using EntryPoint.Features.DrivingApplication.GetApplication;
+using EntryPoint.Features.DrivingApplication.CreateApplication;
+using EntryPoint.Features.DrivingApplication.UploadPhoto;
+using EntryPoint.Features.DrivingApplication.RejectApplication;
+using EntryPoint.Features.DrivingApplication.GetApplicationHistory;
 
 namespace EntryPoint.Features.DrivingApplication.Controllers;
 
@@ -64,7 +67,7 @@ public class ApplicationController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> PostApplicationPhoto([FromForm] CreateApplicationPhotoRequest photo, [FromRoute] Guid applicationId, CancellationToken cancellationToken)
+    public async Task<IActionResult> PostApplicationPhoto([FromForm] UploadPhotoRequest photo, [FromRoute] Guid applicationId, CancellationToken cancellationToken)
     {
         using var ms = new MemoryStream();
         await photo.Photo.CopyToAsync(ms);
@@ -142,7 +145,7 @@ public class ApplicationController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status409Conflict)]
-    public async Task<IActionResult> RejectApplication([FromRoute] Guid applicationId, [FromBody] RejectionRequest rejection, CancellationToken cancellationToken)
+    public async Task<IActionResult> RejectApplication([FromRoute] Guid applicationId, [FromBody] RejectApplicationRequest rejection, CancellationToken cancellationToken)
     {
         var result = await _applicationRepository.UpdateStatusAsync(applicationId, ApplicationStatus.Rejected, rejection?.reason, cancellationToken);
 

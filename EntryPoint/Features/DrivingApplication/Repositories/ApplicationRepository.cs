@@ -1,11 +1,12 @@
 ﻿using EntryPoint.CommonMethods;
 using EntryPoint.Features.DrivingApplication.Interfaces;
-using EntryPoint.Features.DrivingApplication.Models.Requests;
-using EntryPoint.Features.DrivingApplication.Models.Responses;
 using Domain.Enums;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Infrastructure.Persistence.Models;
+using EntryPoint.Features.DrivingApplication.GetApplication;
+using EntryPoint.Features.DrivingApplication.CreateApplication;
+using EntryPoint.Features.DrivingApplication.GetApplicationHistory;
 
 namespace EntryPoint.Features.DrivingApplication.Repositories;
 

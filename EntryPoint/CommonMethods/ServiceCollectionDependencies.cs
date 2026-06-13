@@ -1,6 +1,7 @@
-﻿using EntryPoint.Features.DrivingApplication.Interfaces;
+﻿using EntryPoint.Features.DrivingApplication.CreateApplication.Validations;
+using EntryPoint.Features.DrivingApplication.Interfaces;
 using EntryPoint.Features.DrivingApplication.Repositories;
-using EntryPoint.Features.DrivingApplication.Validations;
+using EntryPoint.Features.DrivingApplication.UploadPhoto;
 using FluentValidation;
 
 namespace EntryPoint.CommonMethods;
@@ -16,8 +17,8 @@ public static class ServiceCollectionDependencies
 
     public static IServiceCollection AddValidators(this IServiceCollection services)
     {
-        services.AddValidatorsFromAssemblyContaining<DrivingLicenceApplicationValidator>();
-        services.AddValidatorsFromAssemblyContaining<DrivingLicenceApplicationPhotoValidator>();
+        services.AddValidatorsFromAssemblyContaining<CreateApplicationValidator>();
+        services.AddValidatorsFromAssemblyContaining<UploadPhotoValidator>();
 
         return services;
     }

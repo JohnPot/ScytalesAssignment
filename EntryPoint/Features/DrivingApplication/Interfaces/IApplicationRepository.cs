@@ -1,7 +1,8 @@
 ﻿using EntryPoint.CommonMethods;
-using EntryPoint.Features.DrivingApplication.Models.Requests;
-using EntryPoint.Features.DrivingApplication.Models.Responses;
 using Domain.Enums;
+using EntryPoint.Features.DrivingApplication.GetApplication;
+using EntryPoint.Features.DrivingApplication.CreateApplication;
+using EntryPoint.Features.DrivingApplication.GetApplicationHistory;
 
 namespace EntryPoint.Features.DrivingApplication.Interfaces;
 

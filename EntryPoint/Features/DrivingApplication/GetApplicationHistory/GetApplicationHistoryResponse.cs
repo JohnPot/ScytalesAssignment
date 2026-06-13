@@ -1,6 +1,6 @@
 ﻿using Domain.Enums;
 
-namespace EntryPoint.Features.DrivingApplication.Models.Responses;
+namespace EntryPoint.Features.DrivingApplication.GetApplicationHistory;
 
 public record GetApplicationHistoryResponse
 {

@@ -1,11 +1,10 @@
-﻿using EntryPoint.Features.DrivingApplication.Models.Requests;
-using FluentValidation;
+﻿using FluentValidation;
 
-namespace EntryPoint.Features.DrivingApplication.Validations;
+namespace EntryPoint.Features.DrivingApplication.UploadPhoto;
 
-public class DrivingLicenceApplicationPhotoValidator : AbstractValidator<CreateApplicationPhotoRequest>
+public class UploadPhotoValidator : AbstractValidator<UploadPhotoRequest>
 {
-    public DrivingLicenceApplicationPhotoValidator()
+    public UploadPhotoValidator()
     {
         RuleFor(x => x.Photo)
             .NotEmpty()
