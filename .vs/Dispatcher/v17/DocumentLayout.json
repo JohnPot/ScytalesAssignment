@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\John\\Desktop\\Code\\Projects\\trg_assignment\\Dispatcher\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C35AEF47-A756-4BFB-B489-804D5291A04B}|Dispatcher\\Dispatcher.csproj|c:\\users\\john\\desktop\\code\\projects\\trg_assignment\\dispatcher\\dispatcher\\controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C35AEF47-A756-4BFB-B489-804D5291A04B}|Dispatcher\\Dispatcher.csproj|solutionrelative:dispatcher\\controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C35AEF47-A756-4BFB-B489-804D5291A04B}|Dispatcher\\Dispatcher.csproj|c:\\users\\john\\desktop\\code\\projects\\trg_assignment\\dispatcher\\dispatcher\\commonmethods\\natpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C35AEF47-A756-4BFB-B489-804D5291A04B}|Dispatcher\\Dispatcher.csproj|solutionrelative:dispatcher\\commonmethods\\natpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C35AEF47-A756-4BFB-B489-804D5291A04B}|Dispatcher\\Dispatcher.csproj|c:\\users\\john\\desktop\\code\\projects\\trg_assignment\\dispatcher\\dispatcher\\repositories\\mainrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C35AEF47-A756-4BFB-B489-804D5291A04B}|Dispatcher\\Dispatcher.csproj|solutionrelative:dispatcher\\repositories\\mainrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C35AEF47-A756-4BFB-B489-804D5291A04B}|Dispatcher\\Dispatcher.csproj|c:\\users\\john\\desktop\\code\\projects\\trg_assignment\\dispatcher\\dispatcher\\commonmethods\\urlvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C35AEF47-A756-4BFB-B489-804D5291A04B}|Dispatcher\\Dispatcher.csproj|solutionrelative:dispatcher\\commonmethods\\urlvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 250,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UrlValidator.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Desktop\\Code\\Projects\\trg_assignment\\Dispatcher\\Dispatcher\\CommonMethods\\UrlValidator.cs",
+              "RelativeDocumentMoniker": "Dispatcher\\CommonMethods\\UrlValidator.cs",
+              "ToolTip": "C:\\Users\\John\\Desktop\\Code\\Projects\\trg_assignment\\Dispatcher\\Dispatcher\\CommonMethods\\UrlValidator.cs",
+              "RelativeToolTip": "Dispatcher\\CommonMethods\\UrlValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T20:34:10.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainRepository.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Desktop\\Code\\Projects\\trg_assignment\\Dispatcher\\Dispatcher\\Repositories\\MainRepository.cs",
+              "RelativeDocumentMoniker": "Dispatcher\\Repositories\\MainRepository.cs",
+              "ToolTip": "C:\\Users\\John\\Desktop\\Code\\Projects\\trg_assignment\\Dispatcher\\Dispatcher\\Repositories\\MainRepository.cs",
+              "RelativeToolTip": "Dispatcher\\Repositories\\MainRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T18:59:27.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NatPublisher.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Desktop\\Code\\Projects\\trg_assignment\\Dispatcher\\Dispatcher\\CommonMethods\\NatPublisher.cs",
+              "RelativeDocumentMoniker": "Dispatcher\\CommonMethods\\NatPublisher.cs",
+              "ToolTip": "C:\\Users\\John\\Desktop\\Code\\Projects\\trg_assignment\\Dispatcher\\Dispatcher\\CommonMethods\\NatPublisher.cs",
+              "RelativeToolTip": "Dispatcher\\CommonMethods\\NatPublisher.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAQwBsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T08:59:20.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainController.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Desktop\\Code\\Projects\\trg_assignment\\Dispatcher\\Dispatcher\\Controllers\\MainController.cs",
+              "RelativeDocumentMoniker": "Dispatcher\\Controllers\\MainController.cs",
+              "ToolTip": "C:\\Users\\John\\Desktop\\Code\\Projects\\trg_assignment\\Dispatcher\\Dispatcher\\Controllers\\MainController.cs",
+              "RelativeToolTip": "Dispatcher\\Controllers\\MainController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAADwvycAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T08:05:53.577Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

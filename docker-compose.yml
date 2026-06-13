@@ -1,0 +1,95 @@
+services:
+
+  # -------------------------
+  # POSTGRES DATABASE
+  # -------------------------
+  postgres:
+    image: postgres:16
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: MyP@ssw0rd
+      POSTGRES_DB: local_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # -------------------------
+  # NATS (JetStream enabled)
+  # -------------------------
+  nats:
+    image: nats:2.10
+    container_name: nats
+    command: ["-js", "-m", "8222"]
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+
+  # -------------------------
+  # JetStream stream initializer
+  # -------------------------
+  nats-init:
+      image: natsio/nats-box:latest
+      depends_on:
+        - nats
+      entrypoint: ["/bin/sh", "-c"]
+      command: >
+        echo "Waiting for NATS..." &&
+        until nats --server nats://nats:4222 server check >/dev/null 2>&1; do
+          sleep 2;
+        done &&
+
+        echo "Ensuring stream exists..." &&
+        nats --server nats://nats:4222 stream info APPLICATIONS >/dev/null 2>&1 || \
+        nats --server nats://nats:4222 stream add APPLICATIONS --subjects "application.*" --storage file
+
+  # -------------------------
+  # ENTRYPOINT (Web API)
+  # -------------------------
+  entrypoint:
+    build:
+      context: .
+      dockerfile: EntryPoint/Dockerfile
+    container_name: entrypoint
+    restart: always
+    depends_on:
+      postgres:
+        condition: service_healthy
+      nats:
+        condition: service_started
+    environment:
+      ASPNETCORE_URLS: http://+:80
+      ConnectionStrings__DefaultConnection: Host=postgres;Port=5432;Database=local_db;Username=postgres;Password=MyP@ssw0rd
+      Nats__Url: nats://nats:4222
+      ASPNETCORE_ENVIRONMENT: Development
+    ports:
+      - "8080:80"
+
+  # -------------------------
+  # APPLICATION WORKER
+  # -------------------------
+  applicationworker:
+    build:
+      context: .
+      dockerfile: ApplicationWorker/Dockerfile
+    container_name: applicationworker
+    restart: always
+    depends_on:
+      postgres:
+        condition: service_healthy
+      nats:
+        condition: service_started
+    environment:
+      ConnectionStrings__DefaultConnection: Host=postgres;Port=5432;Database=local_db;Username=postgres;Password=MyP@ssw0rd
+      Nats__Url: nats://nats:4222
+      ASPNETCORE_ENVIRONMENT: Development
+
+volumes:
+  postgres_data:
